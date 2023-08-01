@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/741a523def.js" crossorigin="anonymous"></script>
+    
+    <title>Aula sobre Forms</title>
+
+    <link  rel="stylesheet" type="text/css" href="./styles/catalogo.css">
+
+    <style type="text/css">
+
+
+    </style>
+
+    <!--<script>
+        var cpf = document.getElementById("password");
+        var atual = document.getElementById("atual");
+
+        cpf.oninput = function(event) {
+        atual.innerHTML = cpf.value;
+        }
+    </script>-->
+
+    <script src="main.js" defer></script>
+
+
+</head>
+
+
+<body id="pratos">
+
+    <header class="headContainer">
+
+            <div class="logoHead">
+                <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
+                <!--<img src="../ATV/assets/pratos.png" width="30px">-->
+            </div>
+
+
+            <!--Inicio toop-->
+            <nav id="topo">
+                <h1 class="logo">Carrinho de compras</h1>
+
+                <div id="navBar">
+                    <ul id="listNav">
+                        <li class=""><a id="" href="#">Pratos</a></li>
+                        <li><a  id="#" href="#">Supermercado</a></li>
+                        <li><a  id="#" href="#">Marcenaria</a></li>
+                        <li><a  id="#" href="#">Técnologia</a></li>
+                    </ul>
+                </div>
+            </nav> <!--Fim /topo-->
+
+            <div class="login">
+                <h1>Login</h1>
+            </div>
+    </header>
+
+    <section id="formsSection">
+        <form method="post" action="#" target="_blank"> <!--O method define qual vai ser o metodo de receber os dados do usuario, essa é uma parte
+        importante da segurança do site, já que um argumento defasado para este atributo seria o "Get", que expõe os dados
+        cliente na url do site, sendo então não recomendado. No lugar de "get" method, é utilizado o "post".
+        Já em ACTION, definimos aode as informações serão armazenadas, quando se tem um BD vinculado, você vincula neste atributo.-->
+
+            <div class="container">
+
+                <label for="inputName">Digite seu nome:</label>
+                <input placeholder="Digite seu nome..." type="text" required
+                id="inputName" autofocus>
+
+            </div>
+
+            <div class="container">
+
+                <label for="inputCPF">Digite seu CPF:</label>
+                <input placeholder="Somente numeros..." type="number" required
+                id="inputCPF">
+
+            </div>
+
+            <div class="container">
+
+                <label for="inputDate">Data de Nascimento:</label>
+                <input  pattern="dd/mm/aa" type="date" required
+                id="inputDate">
+
+            </div>
+
+            <div class="container">
+
+                <label for="curse">Curso:</label>
+                <select name="curseName" id="curse">
+
+                    <option selected value="#"></option>
+                    <option value="PROPF">Proa Profissão</option>
+                    <option value="PROIT">Proa Itensivão</option>
+                    <option value="PROTE">Pra Tech</option>
+
+                </select>
+
+                <select  name="city" id="cidade">
+            
+                    <!--Tag filha-->
+                    <option selected value="cidade">Cidade</option>
+                    <option value="RE">Recife</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SC">Santa Catarina</option>
+                </select> 
+
+            </div>
+
+
+            <div class="container">
+
+                <label for="inputCurse">Resp.:</label>
+                <select name="matherFather" id="">
+                    <option value="mae">Mãe</option>
+                    <option value="pai">Pai</option>
+                    <option value="Outro">Outro</option>
+                    <option value="#" selected></option>
+                </select>
+
+                <input placeholder="Nome do responsável..." type="text" required
+                id="inputName">
+    
+            </div>
+
+            <fieldset id="fieldset">
+                <legend class="textFieldset">Login</legend>
+                <div class="container">
+                    <label for="email">E-Mail: <input type="email" name="email" placeholder="email@gmail.com..." autocomplete="address-level1"/> <br> </label>
+                    <br><br>
+    
+                    <div id="passwordDiv">
+                        <label for="password">Senha: <input id="passwordCamp" class="password" type="password" name="password" placeholder="Crie uma Senha..." maxlength="10" minlength="6"> </label>
+                        <i id="btnPassword" onclick="showPassword()" class="bi bi-eye"></i>
+                       
+                    </div>
+
+                    
+                </div>
+            </fieldset>
+            
+
+            <div id="buttonBox">
+                <button class="button">Enviar</button>
+            </div>
+
+
+        </form>
+    </section>
+
+    <footer id="rodaPe">
+        <div id="boxFooter">
+            
+            <span>Thiago Pessoa &reg; </span>
+
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
